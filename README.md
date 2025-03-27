@@ -1,47 +1,54 @@
-# Sick Comp Project
+# React + TypeScript + Vite
 
-Este projeto é uma aplicação React que utiliza o Tailwind CSS para estilização. O componente principal da aplicação é o `SickComp`, que é um componente funcional que renderiza a interface do usuário relacionada ao "sick comp".
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Estrutura do Projeto
+Currently, two official plugins are available:
 
-A estrutura do projeto é a seguinte:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-```
-sick-comp-project
-├── src
-│   ├── components
-│   │   └── SickComp.tsx      # Componente funcional SickComp
-│   ├── styles
-│   │   └── index.css          # Estilos globais e Tailwind CSS
-│   ├── App.tsx                # Componente principal da aplicação
-│   └── index.tsx              # Ponto de entrada da aplicação
-├── public
-│   └── index.html             # Template HTML base
-├── package.json                # Configuração do npm
-├── tailwind.config.js          # Configuração do Tailwind CSS
-├── postcss.config.js           # Configuração do PostCSS
-├── tsconfig.json               # Configuração do TypeScript
-└── README.md                   # Documentação do projeto
-```
+## Expanding the ESLint configuration
 
-## Instalação
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-Para instalar as dependências do projeto, execute o seguinte comando:
-
-```
-npm install
-```
-
-## Uso
-
-Para iniciar a aplicação em modo de desenvolvimento, utilize o comando:
-
-```
-npm start
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-A aplicação será executada em `http://localhost:3000`.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## Contribuição
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-Sinta-se à vontade para contribuir com melhorias ou correções. Para isso, faça um fork do repositório e envie um pull request com suas alterações.
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
