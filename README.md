@@ -23,11 +23,16 @@ A estrutura do projeto é organizada conforme os princípios da Clean Architectu
 │
 ├── backend/                   # Aplicação Java Spring Boot
 │   ├── src/main/java/com/sickcomp/
-│   │   ├── application/       # Casos de uso (Regras de negócio)
-│   │   ├── domain/            # Entidades e Interfaces
+│   │   ├── core/              # Camada central de regras de negócio
+│   │   │   ├── application/   # Casos de uso (Regras de negócio)
+│   │   │   ├── domain/        # Entidades e Interfaces
+│   │   │   ├── services/      # Serviços de domínio
+│   │   ├── adapters/          # Adaptadores para entrada e saída de dados
+│   │   │   ├── controllers/   # Camada de interface (API REST)
+│   │   │   ├── persistence/   # Repositórios e acesso a dados
+│   │   │   ├── external/      # Integrações com serviços externos
 │   │   ├── infrastructure/    # Implementações técnicas (DB, APIs, etc)
-│   │   ├── controllers/       # Camada de interface (API REST)
-│   │   └── config/            # Configuração do Spring Boot
+│   │   ├── config/            # Configuração do Spring Boot
 │   ├── src/main/resources/
 │   │   ├── application.yml    # Configuração da aplicação
 │   ├── pom.xml                # Configuração do Maven
@@ -40,24 +45,18 @@ A estrutura do projeto é organizada conforme os princípios da Clean Architectu
 ## ⚙️ Tecnologias Utilizadas
 
 ### Frontend:
-
 - **React** (Vite, TypeScript)
 - **Tailwind CSS**
 - **Axios** (Requisições HTTP)
-- **React Router** (Navegação)
 
 ### Backend:
-
-- **Java** (Spring Boot, Spring Web, Spring Data JPA)
+- **Java** (Spring Boot)
 - **Banco de Dados PostgreSQL**
-- **Flyway** (Versionamento do banco de dados)
-- **Lombok** (Redução de boilerplate code)
-- **JUnit** e **Mockito** (Testes unitários)
+- **Cypress** (Testes Unitários e modulares)
 
 ## 🚀 Instalação e Execução
 
 ### 📌 Requisitos:
-
 - Node.js e npm
 - Java 17+
 - Docker e Docker Compose (opcional)
@@ -65,14 +64,12 @@ A estrutura do projeto é organizada conforme os princípios da Clean Architectu
 ### 🔧 Passos para rodar o projeto:
 
 1. **Clone o repositório:**
-
    ```sh
    git clone https://github.com/seu-usuario/sick-comp-project.git
    cd sick-comp-project
    ```
 
 2. **Configurar e rodar o backend:**
-
    ```sh
    cd backend
    mvn clean install
@@ -82,19 +79,16 @@ A estrutura do projeto é organizada conforme os princípios da Clean Architectu
    O backend estará disponível em `http://localhost:8080`
 
 3. **Configurar e rodar o frontend:**
-
    ```sh
    cd frontend
    npm install
    npm start
    ```
 
-   O frontend estará disponível em `http://localhost:3000`
+   O frontend estará disponível em `http://localhost:####
 
 ### 🐳 Executando com Docker
-
 Para rodar o projeto utilizando **Docker**, execute:
-
 ```sh
 docker-compose up --build
 ```
@@ -102,7 +96,6 @@ docker-compose up --build
 ## 🛠️ Princípios Aplicados
 
 ### ✅ SOLID Principles:
-
 1. **Single Responsibility Principle (SRP)**: Cada classe e componente tem uma única responsabilidade.
 2. **Open/Closed Principle (OCP)**: Código modular que permite extensões sem necessidade de modificação.
 3. **Liskov Substitution Principle (LSP)**: Uso de abstrações para evitar dependências diretas.
@@ -110,32 +103,7 @@ docker-compose up --build
 5. **Dependency Inversion Principle (DIP)**: Uso de inversão de dependências para desacoplamento.
 
 ### ✅ Clean Architecture:
-
-- **Separa lógica de negócio (application e domain) da camada de infraestrutura (infra, controllers).**
+- **Divisão clara das responsabilidades entre as camadas Core, Adapters e Infrastructure.**
+- **Isolamento das regras de negócio na camada Core.**
 - **Facilita testes unitários e de integração.**
 - **Mantém o código escalável e de fácil manutenção.**
-
-## 🏗️ Como Contribuir
-
-1. Faça um **fork** do repositório.
-2. Crie uma **branch** para sua feature:
-   ```sh
-   git checkout -b minha-feature
-   ```
-3. Faça commit das suas mudanças:
-   ```sh
-   git commit -m 'Adicionando nova feature'
-   ```
-4. Faça push para a branch:
-   ```sh
-   git push origin minha-feature
-   ```
-5. Abra um **Pull Request**.
-
-## 📄 Licença
-
-Este projeto é distribuído sob a licença MIT. Sinta-se à vontade para utilizá-lo e contribuir!
-
----
-
-💡 **Dúvidas ou sugestões?** Entre em contato ou abra uma issue no repositório! 🚀
