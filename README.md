@@ -85,7 +85,7 @@ A estrutura do projeto é organizada conforme os princípios da Clean Architectu
    npm start
    ```
 
-   O frontend estará disponível em `http://localhost:####
+   O frontend estará disponível em http://localhost:####
 
 ### 🐳 Executando com Docker
 Para rodar o projeto utilizando **Docker**, execute:
@@ -107,3 +107,17 @@ docker-compose up --build
 - **Isolamento das regras de negócio na camada Core.**
 - **Facilita testes unitários e de integração.**
 - **Mantém o código escalável e de fácil manutenção.**
+
+### 📓 Documentação dos frameworks e ferramentas utilizadas:
+- **Frontend:**
+1. React: https://pt-br.react.dev/reference/react
+2. TypeScript: https://www.typescriptlang.org/pt/docs/
+3. Tailwind CSS: https://v2.tailwindcss.com/docs
+4. Axios: https://axios-http.com/ptbr/docs/intro
+
+- **Backend:**
+1. Spring Boot: https://docs.spring.io/spring-framework/reference/index.html
+2. PostgreSQL: https://www.postgresql.org/docs/
+3. Cypress: https://docs.cypress.io/app/get-started/why-cypress
+
+
