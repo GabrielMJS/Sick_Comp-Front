@@ -20,26 +20,6 @@ A estrutura do projeto é organizada conforme os princípios da Clean Architectu
 │   ├── package.json
 │   ├── tailwind.config.js
 │   └── tsconfig.json
-│
-├── backend/                   # Aplicação Java Spring Boot
-│   ├── src/main/java/com/sickcomp/
-│   │   ├── core/              # Camada central de regras de negócio
-│   │   │   ├── application/   # Casos de uso (Regras de negócio)
-│   │   │   ├── domain/        # Entidades e Interfaces
-│   │   │   ├── services/      # Serviços de domínio
-│   │   ├── adapters/          # Adaptadores para entrada e saída de dados
-│   │   │   ├── controllers/   # Camada de interface (API REST)
-│   │   │   ├── persistence/   # Repositórios e acesso a dados
-│   │   │   ├── external/      # Integrações com serviços externos
-│   │   ├── infrastructure/    # Implementações técnicas (DB, APIs, etc)
-│   │   ├── config/            # Configuração do Spring Boot
-│   ├── src/main/resources/
-│   │   ├── application.yml    # Configuração da aplicação
-│   ├── pom.xml                # Configuração do Maven
-│   └── Dockerfile             # Containerização do backend
-│
-├── README.md                  # Documentação do projeto
-└── docker-compose.yml          # Orquestração dos serviços
 ```
 
 ## ⚙️ Tecnologias Utilizadas
@@ -49,36 +29,9 @@ A estrutura do projeto é organizada conforme os princípios da Clean Architectu
 - **Tailwind CSS**
 - **Axios** (Requisições HTTP)
 
-### Backend:
-- **Java** (Spring Boot)
-- **Banco de Dados PostgreSQL**
-- **Cypress** (Testes Unitários e modulares)
-
 ## 🚀 Instalação e Execução
 
-### 📌 Requisitos:
-- Node.js e npm
-- Java 17+
-- Docker e Docker Compose (opcional)
-
-### 🔧 Passos para rodar o projeto:
-
-1. **Clone o repositório:**
-   ```sh
-   git clone https://github.com/seu-usuario/sick-comp-project.git
-   cd sick-comp-project
-   ```
-
-2. **Configurar e rodar o backend:**
-   ```sh
-   cd backend
-   mvn clean install
-   mvn spring-boot:run
-   ```
-
-   O backend estará disponível em `http://localhost:8080`
-
-3. **Configurar e rodar o frontend:**
+1. **Configurar e rodar o frontend:**
    ```sh
    cd frontend
    npm install
@@ -86,12 +39,6 @@ A estrutura do projeto é organizada conforme os princípios da Clean Architectu
    ```
 
    O frontend estará disponível em http://localhost:####
-
-### 🐳 Executando com Docker
-Para rodar o projeto utilizando **Docker**, execute:
-```sh
-docker-compose up --build
-```
 
 ## 🛠️ Princípios Aplicados
 
@@ -114,10 +61,3 @@ docker-compose up --build
 2. TypeScript: https://www.typescriptlang.org/pt/docs/
 3. Tailwind CSS: https://v2.tailwindcss.com/docs
 4. Axios: https://axios-http.com/ptbr/docs/intro
-
-- **Backend:**
-1. Spring Boot: https://docs.spring.io/spring-framework/reference/index.html
-2. PostgreSQL: https://www.postgresql.org/docs/
-3. Cypress: https://docs.cypress.io/app/get-started/why-cypress
-
-
