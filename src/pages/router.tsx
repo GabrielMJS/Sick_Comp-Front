@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./home/home";
-import NotFound from "./not-found/not-found";
+import PaginaDeLogin from "./paginaDeLogin";
+import PaginaInicial from "./paginaInicial";
+import CriaçãoDeConta from "./paginaDeCriaçãoDeConta";
 
 function AppRouter() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/" element={<PaginaInicial />} />
+      <Route path="/Login" element={<PaginaDeLogin />} />
+      <Route path="/CriacaoDeConta" element={<CriaçãoDeConta />} />
     </Routes>
   );
 }
