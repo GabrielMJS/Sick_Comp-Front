@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import PaginaDeLogin from "./paginaDeLogin";
 import PaginaHome from "./paginaHome";
+import PaginaDeLogin from "./paginaDeLogin";
 import CriaçãoDeConta from "./paginaDeCriaçãoDeConta";
 
 function AppRouter() {

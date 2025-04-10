@@ -2,7 +2,7 @@ import React from "react";
 
 const paginaHome: React.FC = () => {
   return (
-    <div className="flex h-screen bg-blue-900 text-white">
+    <div className="flex min-h-screen min-w-screen bg-blue-900 text-white overflow-hidden">
       {/* Sidebar */}
       <aside className="w-1/5 bg-blue-800 flex flex-col items-center py-6">
         <div className="flex items-center mb-8">
@@ -11,7 +11,7 @@ const paginaHome: React.FC = () => {
           </h1>
         </div>
         <img
-          src="src\assets\Images\iconeUsuario.png" // Substitua pelo caminho correto do logo
+          src="src/assets/Images/iconeUsuario.png" // Substitua pelo caminho correto do logo
           alt="Sick Comp Logo"
           className="h-10 mr-2"
         />
