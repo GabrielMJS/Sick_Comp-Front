@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-export default function PaginaInicial() {
+export default function PaginaDeLogin() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-blue-900 relative">
       {/* Header */}
       <header className="absolute top-0 left-0 w-full bg-blue-800 py-4 px-8 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="src\assets\Images\Sick-Comp (Logo).png" // Substitua pelo caminho correto do logo
+            src="src\assets\Images\Sick-Comp (Logo).png" // Vai ser a imagem do usuario
             alt="Sick Comp Logo"
             className="h-8 mr-2"
           />
@@ -71,3 +71,4 @@ export default function PaginaInicial() {
     </div>
   );
 }
+
