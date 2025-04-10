@@ -60,7 +60,7 @@ export default function PaginaDeLogin() {
               Entrar
             </button>
             <Link
-              to="/criar-conta"
+              to="/CriacaoDeConta"
               className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
             >
               Criar conta

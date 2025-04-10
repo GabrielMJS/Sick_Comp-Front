@@ -27,7 +27,7 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
         <div style={{
           marginBottom: '10px'
         }}>
-          <label htmlFor="login">Login:</label>
+          <label htmlFor="login" style={{ color: 'black' }}>Login:</label>
           <input
             type="text"
             id="login"
@@ -37,9 +37,13 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
             style={{
               width: '100%',
               padding: '8px',
-              marginTop: '5px'
+              marginTop: '5px',
+              borderRadius: '5px',
+              backgroundColor: '#4da6a6',
+              color: 'ffffff' // Para o texto dentro do campo
             }}
           />
+
         </div>
         <div style={{
           marginBottom: '10px'
@@ -54,7 +58,9 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
             style={{
               width: '100%',
               padding: '8px',
-              marginTop: '5px'
+              marginTop: '5px',
+              borderRadius: '5px',
+              backgroundColor: '#4da6a6'
             }}
           />
         </div>
@@ -71,7 +77,9 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
             style={{
               width: '100%',
               padding: '8px',
-              marginTop: '5px'
+              marginTop: '5px',
+              borderRadius: '5px',
+              backgroundColor: '#4da6a6'
             }}
           />
         </div>
@@ -88,14 +96,18 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
               width: '100%',
               padding: '8px',
               marginTop: '5px'
+
             }}
           >
             <option value="" disabled>
               Selecione uma opção
+
             </option>
             <option value="cuidador">Cuidador(a)</option>
             <option value="idoso">Idoso</option>
             <option value="familiar">Familiar</option>
+
+
           </select>
         </div>
         <button
