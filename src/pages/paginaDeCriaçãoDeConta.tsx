@@ -17,10 +17,16 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }}>
+    <div style={{
+      maxWidth: '400px',
+      margin: '0 auto',
+      padding: '5px'
+    }}>
       <h1>Criação de Conta</h1>
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '10px' }}>
+        <div style={{
+          marginBottom: '10px'
+        }}>
           <label htmlFor="login">Login:</label>
           <input
             type="text"
@@ -28,10 +34,16 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
             value={login}
             onChange={(e) => setLogin(e.target.value)}
             required
-            style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+            style={{
+              width: '100%',
+              padding: '8px',
+              marginTop: '5px'
+            }}
           />
         </div>
-        <div style={{ marginBottom: '10px' }}>
+        <div style={{
+          marginBottom: '10px'
+        }}>
           <label htmlFor="senha">Senha:</label>
           <input
             type="password"
@@ -39,10 +51,16 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
             required
-            style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+            style={{
+              width: '100%',
+              padding: '8px',
+              marginTop: '5px'
+            }}
           />
         </div>
-        <div style={{ marginBottom: '10px' }}>
+        <div style={{
+          marginBottom: '10px'
+        }}>
           <label htmlFor="confirmaSenha">Confirme a Senha:</label>
           <input
             type="password"
@@ -50,17 +68,27 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
             value={confirmaSenha}
             onChange={(e) => setConfirmaSenha(e.target.value)}
             required
-            style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+            style={{
+              width: '100%',
+              padding: '8px',
+              marginTop: '5px'
+            }}
           />
         </div>
-        <div style={{ marginBottom: '10px' }}>
+        <div style={{
+          marginBottom: '10px'
+        }}>
           <label htmlFor="tipoUsuario">Tipo de Usuário:</label>
           <select
             id="tipoUsuario"
             value={tipoUsuario}
             onChange={(e) => setTipoUsuario(e.target.value)}
             required
-            style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+            style={{
+              width: '100%',
+              padding: '8px',
+              marginTop: '5px'
+            }}
           >
             <option value="" disabled>
               Selecione uma opção
