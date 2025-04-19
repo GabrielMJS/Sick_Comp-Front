@@ -1,4 +1,3 @@
-
 const Colors = {
   Backgrond_Color: "#060644", // Fundo principal (azul escuro)
   Backgrond_Color_Header: "#3a3971", // Fundo do cabeçalho (azul intermediário)

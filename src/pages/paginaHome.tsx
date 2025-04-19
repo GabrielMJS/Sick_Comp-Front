@@ -3,7 +3,8 @@ import Colors from "../ClassColors";
 
 const paginaHome: React.FC = () => {
   return (
-    <div style={{ backgroundColor: Colors.Background_Color }} className="flex min-h-screen min-w-screen text-white overflow-hidden">
+    <div style={{ backgroundColor: Colors.Backgrond_Color }}
+    className="flex min-h-screen min-w-screen text-white overflow-hidden">
       {/* Sidebar */}
       <aside className="w-1/5 bg-blue-800 flex flex-col items-center py-6">
         <div className="flex items-center mb-8">
