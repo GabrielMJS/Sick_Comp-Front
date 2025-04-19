@@ -7,4 +7,4 @@ const Colors = {
   Text_Color_Secondary: "#2cd8ed", // Cor do texto secundário (azul claro)
 };
 
-export default Colors;
+export default Colors; 
