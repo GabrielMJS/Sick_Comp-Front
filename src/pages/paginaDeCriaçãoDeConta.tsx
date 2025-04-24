@@ -17,97 +17,92 @@ const PaginaDeCriacaoDeConta: React.FC = () => {
   };
 
   return (
-    <div style={{
-      maxWidth: '400px',
-      margin: '0 auto',
-      padding: '5px'
-    }}>
-      <h1>Criação de Conta</h1>
-      <form onSubmit={handleSubmit}>
-        <div style={{
-          marginBottom: '10px'
-        }}>
-          <label htmlFor="login" style={{ color: 'black' }}>Login:</label>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        backgroundColor: '#1c398e',
+      }}
+    >
+      <form
+        style={{
+          width: '400px',
+          padding: '20px',
+          color: 'white',
+          backgroundColor: '#193cb8',
+          borderRadius: '10px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        }}
+      >
+        <div style={{ marginBottom: '15px' }}>
+          <label htmlFor="login">Login</label>
           <input
             type="text"
             id="login"
-            value={login}
-            onChange={(e) => setLogin(e.target.value)}
-            required
+            name="login"
             style={{
               width: '100%',
-              padding: '8px',
+              color: '#8ec5fa',
+              padding: '10px',
+              backgroundColor: '#1447e6',
               marginTop: '5px',
+              border: '1px solid #ccc',
               borderRadius: '5px',
-              backgroundColor: '#4da6a6',
-              color: 'ffffff' // Para o texto dentro do campo
             }}
           />
-
         </div>
-        <div style={{
-          marginBottom: '10px'
-        }}>
-          <label htmlFor="senha">Senha:</label>
+        <div style={{ marginBottom: '15px' }}>
+          <label htmlFor="senha">Senha</label>
           <input
             type="password"
             id="senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-            required
+            name="senha"
             style={{
               width: '100%',
-              padding: '8px',
+              padding: '10px',
+              backgroundColor: '#1447e6',
               marginTop: '5px',
+              border: '1px solid #ccc',
               borderRadius: '5px',
-              backgroundColor: '#4da6a6'
             }}
           />
         </div>
-        <div style={{
-          marginBottom: '10px'
-        }}>
-          <label htmlFor="confirmaSenha">Confirme a Senha:</label>
+        <div style={{ marginBottom: '15px' }}>
+          <label htmlFor="confirmeSenha">Confirme a Senha</label>
           <input
             type="password"
-            id="confirmaSenha"
-            value={confirmaSenha}
-            onChange={(e) => setConfirmaSenha(e.target.value)}
-            required
+            id="confirmeSenha"
+            name="confirmeSenha"
             style={{
               width: '100%',
-              padding: '8px',
+              padding: '10px',
+              backgroundColor: '#1447e6',
               marginTop: '5px',
+              border: '1px solid #ccc',
               borderRadius: '5px',
-              backgroundColor: '#4da6a6'
             }}
           />
         </div>
-        <div style={{
-          marginBottom: '10px'
-        }}>
-          <label htmlFor="tipoUsuario">Tipo de Usuário:</label>
+        <div style={{ marginBottom: '15px' }}>
+          <label htmlFor="tipoUsuario">Tipo de usuário</label>
           <select
             id="tipoUsuario"
-            value={tipoUsuario}
-            onChange={(e) => setTipoUsuario(e.target.value)}
-            required
+            name="tipoUsuario"
             style={{
               width: '100%',
-              padding: '8px',
-              marginTop: '5px'
-
+              padding: '10px',
+              marginTop: '5px',
+              backgroundColor: '#1447e6',
+              border: '1px solid #ccc',
+              borderRadius: '5px',
             }}
           >
-            <option value="" disabled>
-              Selecione uma opção
-
-            </option>
+            <option value="">Selecione uma opção</option>
             <option value="cuidador">Cuidador(a)</option>
             <option value="idoso">Idoso</option>
             <option value="familiar">Familiar</option>
-
-
           </select>
         </div>
         <button
