@@ -20,7 +20,7 @@ const paginaHome: React.FC = () => {
         <div>
           <nav className="flex flex-col w-full items-center">
             <a
-              href="#"
+              href=""
               className="flex items-center px-4 py-2 hover:bg-blue-700 transition w-4/5 justify-between"
             >
               <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
@@ -29,7 +29,7 @@ const paginaHome: React.FC = () => {
               <span className="ml-4">Home</span>
             </a>
             <a
-              href="#"
+              href=""
               className="flex items-center px-4 py-2 hover:bg-blue-700 transition w-4/5 justify-between"
             >
               <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">

@@ -1,128 +1,89 @@
-import React, { useState } from 'react';
+import React from "react";
+import { Link } from "react-router-dom"; // Importa o Link do react-router-dom
+import Colors from "../ClassColors";
 
-const PaginaDeCriacaoDeConta: React.FC = () => {
-  const [login, setLogin] = useState('');
-  const [senha, setSenha] = useState('');
-  const [confirmaSenha, setConfirmaSenha] = useState('');
-  const [tipoUsuario, setTipoUsuario] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (senha !== confirmaSenha) {
-      alert('As senhas não coincidem!');
-      return;
-    }
-    // Lógica para criar a conta
-    console.log({ login, senha, tipoUsuario });
-  };
-
+const paginaPerfilIdoso: React.FC = () => {
   return (
     <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        backgroundColor: '#1c398e',
-      }}
+      style={{ backgroundColor: Colors.Backgrond_Color }}
+      className="flex min-h-screen min-w-screen text-white overflow-hidden"
     >
-      <form
-        style={{
-          width: '400px',
-          padding: '20px',
-          color: 'white',
-          backgroundColor: '#193cb8',
-          borderRadius: '10px',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        }}
+      {/* Sidebar */}
+      <aside
+        style={{ backgroundColor: Colors.Backgrond_Color }}
+        className="w-1/5 bg-blue-800 flex flex-col items-center py-6"
       >
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="login">Login</label>
-          <input
-            type="text"
-            id="login"
-            name="login"
-            style={{
-              width: '100%',
-              color: '#8ec5fa',
-              padding: '10px',
-              backgroundColor: '#1447e6',
-              marginTop: '5px',
-              border: '1px solid #ccc',
-              borderRadius: '5px',
-            }}
-          />
+        <div className="flex items-center mb-8">
+          <h1 className="text-2xl font-bold">
+            Sick <span className="text-blue-300">Comp</span>
+          </h1>
         </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="senha">Senha</label>
-          <input
-            type="password"
-            id="senha"
-            name="senha"
-            style={{
-              width: '100%',
-              padding: '10px',
-              backgroundColor: '#1447e6',
-              marginTop: '5px',
-              border: '1px solid #ccc',
-              borderRadius: '5px',
-            }}
-          />
+        <img
+          src="src/assets/Images_Icons/iconeUsuario.png" // Substitua pelo caminho correto do logo
+          alt="Sick Comp Logo"
+          className="h-30 mt-6 mr-4 mb-6"
+        />
+        <div>
+          <nav className="flex flex-col w-full items-center">
+            <Link
+              to="/"
+              className="flex items-center px-4 py-2 hover:bg-blue-700 transition w-4/5 justify-between"
+            >
+              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                {/* Ícone pode ser colocado aqui */}
+              </div>
+              <span className="ml-4">Home</span>
+            </Link>
+            <Link
+              to="/PerfilIdoso"
+              className="flex items-center px-4 py-2 hover:bg-blue-700 transition w-4/5 justify-between"
+            >
+              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                {/* Ícone pode ser colocado aqui */}
+              </div>
+              <span className="ml-4">Perfil</span>
+            </Link>
+            <Link
+              to="/PerfilCuidadora"
+              className="flex items-center px-4 py-2 hover:bg-blue-700 transition w-4/5 justify-between"
+            >
+              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                {/* Ícone pode ser colocado aqui */}
+              </div>
+              <span className="ml-4">Enfermeiras</span>
+            </Link>
+            <Link
+              to="/Avaliacoes"
+              className="flex items-center px-4 py-2 hover:bg-blue-700 transition w-4/5 justify-between"
+            >
+              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                {/* Ícone pode ser colocado aqui */}
+              </div>
+              <span className="ml-4">Avaliações</span>
+            </Link>
+            <Link
+              to="/Configuracoes"
+              className="flex items-center px-4 py-2 hover:bg-blue-700 transition w-4/5 justify-between"
+            >
+              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                {/* Ícone pode ser colocado aqui */}
+              </div>
+              <span className="ml-4">Configurações</span>
+            </Link>
+          </nav>
         </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="confirmeSenha">Confirme a Senha</label>
-          <input
-            type="password"
-            id="confirmeSenha"
-            name="confirmeSenha"
-            style={{
-              width: '100%',
-              padding: '10px',
-              backgroundColor: '#1447e6',
-              marginTop: '5px',
-              border: '1px solid #ccc',
-              borderRadius: '5px',
-            }}
-          />
-        </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="tipoUsuario">Tipo de usuário</label>
-          <select
-            id="tipoUsuario"
-            name="tipoUsuario"
-            style={{
-              width: '100%',
-              padding: '10px',
-              marginTop: '5px',
-              backgroundColor: '#1447e6',
-              border: '1px solid #ccc',
-              borderRadius: '5px',
-            }}
+        <div className="mt-auto">
+          <Link
+            to="/Login"
+            className="flex items-center px-4 py-2 hover:bg-blue-700 transition"
           >
-            <option value="">Selecione uma opção</option>
-            <option value="cuidador">Cuidador(a)</option>
-            <option value="idoso">Idoso</option>
-            <option value="familiar">Familiar</option>
-          </select>
+            <i className="fas fa-sign-out-alt mr-2"></i> Log Out
+          </Link>
         </div>
-        <button
-          type="submit"
-          style={{
-            width: '100%',
-            padding: '10px',
-            backgroundColor: '#007BFF',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-          }}
-        >
-          Criar Conta
-        </button>
-      </form>
+      </aside>
     </div>
   );
 };
 
-export default PaginaDeCriacaoDeConta;
+export default paginaPerfilIdoso;
 

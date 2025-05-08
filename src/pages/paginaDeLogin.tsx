@@ -7,22 +7,55 @@ export default function PaginaDeLogin() {
       <header className="absolute top-0 left-0 w-full bg-blue-800 py-4 px-8 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="src\assets\Images\Sick-Comp (Logo).png" // Vai ser a imagem do usuario
+            src="src/assets/Images/Sick-Comp (Logo).png" // Vai ser a imagem do usuário
             alt="Sick Comp Logo"
             className="h-8 mr-2"
           />
           <img
-            src="src\assets\Images\logoSickComp (1).png" // Substitua pelo caminho correto do nome
+            src="src/assets/Images/logoSickComp (1).png" // Substitua pelo caminho correto do nome
             alt="Sick Comp Nome"
             className="h-8"
           />
         </div>
+        {/* Navigation Links */}
+        <nav className="flex space-x-4">
+          <Link
+            to="/"
+            className="text-white hover:text-blue-300 transition"
+          >
+            Home
+          </Link>
+          <Link
+            to="/PerfilIdoso"
+            className="text-white hover:text-blue-300 transition"
+          >
+            Perfil Idoso
+          </Link>
+          <Link
+            to="/PerfilCuidadora"
+            className="text-white hover:text-blue-300 transition"
+          >
+            Enfermeiras
+          </Link>
+          <Link
+            to="/Avaliacoes"
+            className="text-white hover:text-blue-300 transition"
+          >
+            Avaliações
+          </Link>
+          <Link
+            to="/Configuracoes"
+            className="text-white hover:text-blue-300 transition"
+          >
+            Configurações
+          </Link>
+        </nav>
       </header>
 
       {/* Login Box */}
       <div className="bg-blue-800 text-white p-8 rounded-lg shadow-lg w-96">
         <img
-          src="src\assets\Images\logoSickComp (1).png" // Substitua pelo caminho correto do nome
+          src="src/assets/Images/logoSickComp (1).png" // Substitua pelo caminho correto do nome
           alt="Sick Comp Nome"
           className="h-8"
         />
@@ -71,4 +104,3 @@ export default function PaginaDeLogin() {
     </div>
   );
 }
-
